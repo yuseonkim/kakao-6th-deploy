@@ -1,11 +1,13 @@
 package com.example.kakao.user;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Getter
-@ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Table(name="user_tb")

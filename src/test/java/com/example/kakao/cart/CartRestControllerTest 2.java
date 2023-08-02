@@ -118,21 +118,4 @@ public class CartRestControllerTest extends MyRestDoc {
         resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
     }
 
-    @WithUserDetails(value = "ssarmango@nate.com")
-    @Test
-    public void delete_test() throws Exception {
-        // given
-
-        // when
-        ResultActions resultActions = mvc.perform(
-                post("/carts/delete")
-        );
-
-        String responseBody = resultActions.andReturn().getResponse().getContentAsString();
-        System.out.println("테스트 : " + responseBody);
-
-        // verify
-        resultActions.andExpect(jsonPath("$.success").value("true"));
-    }
-
 }

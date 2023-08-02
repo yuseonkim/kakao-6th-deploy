@@ -2,7 +2,10 @@ package com.example.kakao.cart;
 
 import com.example.kakao.product.option.Option;
 import com.example.kakao.user.User;
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 

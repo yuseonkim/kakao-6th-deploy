@@ -7,7 +7,4 @@ import java.util.List;
 
 public interface ItemJPARepository extends JpaRepository<Item, Integer> {
 
-    List<Item> findByOrderId(int orderId);
-
-    List<Item> findAllByOrderId(int id);
 }

@@ -6,6 +6,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Getter
+@ToString
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 @Table(name="order_tb", indexes = {
