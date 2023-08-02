@@ -30,7 +30,7 @@ public class CartRestControllerTest extends MyRestDoc {
     @Autowired
     private ObjectMapper om;
 
-    @WithUserDetails(value = "ssarmango@nate.com")
+    @WithUserDetails(value = "ssar@nate.com")
     @Test
     public void addCartList_test() throws Exception {
         // given -> optionId [1,2,16]이 teardown.sql을 통해 들어가 있음
@@ -57,7 +57,7 @@ public class CartRestControllerTest extends MyRestDoc {
         resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
     }
 
-    @WithUserDetails(value = "ssarmango@nate.com")
+    @WithUserDetails(value = "ssar@nate.com")
     @Test
     public void findAll_test() throws Exception {
         // given teardown
@@ -85,7 +85,7 @@ public class CartRestControllerTest extends MyRestDoc {
         resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
     }
 
-    @WithUserDetails(value = "ssarmango@nate.com")
+    @WithUserDetails(value = "ssar@nate.com")
     @Test
     public void update_test() throws Exception {
         // given -> cartId [1번 5개,2번 1개,3번 5개]가 teardown.sql을 통해 들어가 있음
@@ -118,7 +118,7 @@ public class CartRestControllerTest extends MyRestDoc {
         resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
     }
 
-    @WithUserDetails(value = "ssarmango@nate.com")
+    @WithUserDetails(value = "ssar@nate.com")
     @Test
     public void delete_test() throws Exception {
         // given

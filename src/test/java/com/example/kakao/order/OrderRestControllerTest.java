@@ -26,7 +26,7 @@ public class OrderRestControllerTest extends MyRestDoc {
     @Autowired
     private ObjectMapper om;
 
-    @WithUserDetails(value = "ssarmango@nate.com")
+    @WithUserDetails(value = "ssar@nate.com")
     @Test
     public void saveOrder_test() throws Exception{
         // given teardown
@@ -53,7 +53,7 @@ public class OrderRestControllerTest extends MyRestDoc {
         resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
     }
 
-    @WithUserDetails(value = "ssarmango@nate.com")
+    @WithUserDetails(value = "ssar@nate.com")
     @Test
     public void findOrderById_test() throws Exception{
         // given teardown
@@ -81,7 +81,7 @@ public class OrderRestControllerTest extends MyRestDoc {
         resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
 
     }
-    @WithUserDetails(value = "ssarmango@nate.com")
+    @WithUserDetails(value = "ssar@nate.com")
     @Test
     public void saveOrderCartEmpty_test() throws Exception {
         // given
