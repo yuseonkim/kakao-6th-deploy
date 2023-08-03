@@ -1,4 +1,4 @@
-package com.example.kakao._core.user;
+package com.example.kakao.user;
 
 import com.example.kakao.MyRestDoc;
 import com.example.kakao.user.UserRequest;
