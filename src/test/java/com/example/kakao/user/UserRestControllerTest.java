@@ -60,6 +60,31 @@ public class UserRestControllerTest extends MyRestDoc {
     }
 
     @Test
+    public void loginNotFoundEmail_test() throws Exception{
+        // given teardown.sql
+        UserRequest.JoinDTO requestDTO = new UserRequest.JoinDTO();
+        requestDTO.setEmail("whatthe@nate.com");
+        requestDTO.setPassword("12341234!ab@");
+
+        String requestBody = om.writeValueAsString(requestDTO);
+
+        // when
+        ResultActions resultActions = mvc.perform(
+                post("/join")
+                        .content(requestBody)
+                        .contentType(MediaType.APPLICATION_JSON_VALUE)
+        );
+
+        // console
+        String responseBody = resultActions.andReturn().getResponse().getContentAsString();
+        System.out.println("테스트 : "+responseBody);
+
+        //verify
+        resultActions.andExpect(jsonPath("$.success").value("false"));
+        resultActions.andDo(MockMvcResultHandlers.print()).andDo(document);
+    }
+
+    @Test
     public void join_email_validation_test() throws Exception{
         // given
 
